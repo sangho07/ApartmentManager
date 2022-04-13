@@ -15,11 +15,8 @@ public class TenantTable : ATable
 
     public void Add(string name, int age, bool gender, string ssn, int roomID)
     {
-        Room room = (Room)roomTable.Get(roomID);
-        if (room != null)
-        {
-            room.incrementTenant();
-            base.Add(new Tenant(lastID++, name, age, gender, ssn, roomID));
-        }
+        Room room = roomTable.GetByRoomID(roomID);
+        room.incrementTenant();
+        base.Add(new Tenant(name, age, gender, ssn, roomID));
     }
 }
