@@ -5,7 +5,7 @@ public class Person : IRecord
     public int id { get; }
     protected string name;
     protected int age;
-    protected bool gender;
+    protected bool gender; // true = Male, false = Female
     protected string ssn;
 
     public Person(int id, string name, int age, bool gender, string ssn)
