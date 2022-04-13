@@ -15,7 +15,7 @@ public class Apartment
         this.name = name;
         this.address = address;
         this.roomTable = new RoomTable();
-        this.tenantTable = new TenantTable(ref roomTable);
+        this.tenantTable = new TenantTable(roomTable);
         this.employeeTable = new EmployeeTable();
     }
 }

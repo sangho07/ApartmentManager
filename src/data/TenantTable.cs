@@ -4,7 +4,7 @@ public class TenantTable : ATable
 {
     private RoomTable roomTable;
 
-    public TenantTable(ref RoomTable roomTable)
+    public TenantTable(RoomTable roomTable)
     {
         this.roomTable = roomTable;
     }
