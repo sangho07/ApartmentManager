@@ -3,13 +3,11 @@ using System.Collections.Generic;
 
 public abstract class ATable
 {
-    private List<IRecord> records;
-    protected int lastID;
+    protected List<IRecord> records;
 
     public ATable()
     {
         this.records = new List<IRecord>();
-        this.lastID = 0;
     }
 
     public void Add(IRecord rec)
@@ -24,9 +22,7 @@ public abstract class ATable
 
     public IRecord Get(int id)
     {
-        IRecord rec = records.Find(entry => entry.id == id);
-        if (rec == null) throw new ArgumentException($"Can't find that ID, last ID is {lastID}");
-        return rec;
+        return records[id];
     }
 
     public void Delete(int id)

@@ -7,6 +7,6 @@ public class EmployeeTable : ATable
 
     public void Add(string name, int age, bool gender, string ssn, int salary, string role)
     {
-        base.Add(new Employee(lastID++, name, age, gender, ssn, salary, role));
+        base.Add(new Employee(name, age, gender, ssn, salary, role));
     }
 }

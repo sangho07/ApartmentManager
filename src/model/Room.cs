@@ -1,24 +1,25 @@
 public class Room : IRecord
 {
-    public int id { get; }
+    public int roomID { get; } // Unique
     private int price;
     private int maxTenants;
     private int currentTenants;
+
 
     public void incrementTenant()
     {
         if (currentTenants < maxTenants) currentTenants++;
     }
 
-    public Room(int id, int price, int maxTenants)
+    public Room(int roomID, int price, int maxTenants)
     {
-        this.id = id;
+        this.roomID = roomID;
         this.price = price;
         this.maxTenants = maxTenants;
     }
 
     public override string ToString()
     {
-        return $"id {id} | price {price} | maxTenants {maxTenants}\t| currentTenants {currentTenants}";
+        return $"roomID {roomID} | price {price} | maxTenants {maxTenants} | currentTenants {currentTenants}";
     }
 }

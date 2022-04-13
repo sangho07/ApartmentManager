@@ -7,6 +7,8 @@ public class RoomTable : ATable
 
     public void Add(int price, int maxTenants)
     {
-        base.Add(new Room(lastID++, price, maxTenants));
+    public void Add(int roomID, int price, int maxTenants)
+    {
+        base.Add(new Room(roomID, price, maxTenants));
     }
 }
