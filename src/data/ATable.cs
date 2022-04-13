@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 public abstract class ATable
@@ -23,7 +24,9 @@ public abstract class ATable
 
     public IRecord Get(int id)
     {
-        return records.Find(entry => entry.id == id);
+        IRecord rec = records.Find(entry => entry.id == id);
+        if (rec == null) throw new ArgumentException($"Can't find that ID, last ID is {lastID}");
+        return rec;
     }
 
     public void Delete(int id)
