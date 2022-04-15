@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 
-public abstract class ATable
+public class Table
 {
     protected List<IRecord> records;
 
-    public ATable()
+    public Table()
     {
         this.records = new List<IRecord>();
     }
@@ -29,6 +29,4 @@ public abstract class ATable
     {
         records.Remove(Get(id));
     }
-
-    public abstract void Update(int id);
 }

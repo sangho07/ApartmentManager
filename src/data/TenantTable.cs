@@ -1,16 +1,12 @@
 using System;
 
-public class TenantTable : ATable
+public class TenantTable : Table
 {
     private RoomTable roomTable;
 
     public TenantTable(RoomTable roomTable)
     {
         this.roomTable = roomTable;
-    }
-    public override void Update(int id)
-    {
-        throw new NotImplementedException();
     }
 
     public void Add(string name, int age, bool gender, string ssn, int roomID)

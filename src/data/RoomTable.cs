@@ -1,13 +1,8 @@
 using System;
 using System.Collections.Generic;
 
-public class RoomTable : ATable
+public class RoomTable : Table
 {
-    public override void Update(int id)
-    {
-        throw new System.NotImplementedException();
-    }
-
     public Room GetByRoomID(int roomID)
     {
         var r = records.Find(rec =>
