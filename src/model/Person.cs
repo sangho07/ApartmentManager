@@ -13,10 +13,8 @@ public class Person : IRecord
         this.name = name;
         this.age = age;
         this.gender = gender;
-        if (ssn.Length == 12)
-        {
-            this.ssn = ssn;
-        }
+        if (ssn.Length == 12 && Int64.TryParse(ssn, out Int64 i)) this.ssn = ssn;
+        else throw new ArgumentException("SSN must be 12 character long and numeric");
     }
 
 
