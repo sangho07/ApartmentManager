@@ -9,7 +9,7 @@ public class RoomTable : Table
         {
             Room room = (Room)rec;
             return room.roomID == roomID;
-        });
+        } );
         if (r == null) throw new ArgumentException("No such roomID exists");
         return (Room)r;
     }
